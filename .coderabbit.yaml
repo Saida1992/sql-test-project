@@ -1,0 +1,10 @@
+language: "az"
+reviews:
+  request_tools:
+    enabled: true
+  path_instructions:
+    - path: "**/*.sql"
+      instructions: |
+        Sən təcrübəli SQL Kod Analitisisən. SQL kodlarını bu meyarlara görə yoxla:
+        1. CTE Təkrarı: Eyni cədvəl eyni CTE daxilində təkrarən istifadə olunubsa xəbərdarlıq et.
+        2. Performans və Təhlükəsizlik: SQL injection və ya optimizasiyasız sorğular olmasın.
