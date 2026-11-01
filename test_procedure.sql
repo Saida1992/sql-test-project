@@ -1,7 +1,12 @@
-CREATE PROCEDURE GetEmployeeDetails 
-    @EmployeeId INT
+CREATE PROCEDURE TestProcedure
 AS
 BEGIN
-    -- Sadə SQL sorğusu test üçün for coderabbit
-    SELECT * FROM Employees WHERE Id = @EmployeeId;
+    -- Qəsdən eyni cədvəli CTE içində təkrar istifadə edirik ki, CodeRabbit bunu tutsun
+    WITH CTE1 AS (
+        SELECT * FROM Employees WHERE DepartmentId = 1
+    ),
+    CTE2 AS (
+        SELECT * FROM Employees WHERE DepartmentId = 1 -- Təkrarsorğu
+    )
+    SELECT * FROM CTE1 UNION ALL SELECT * FROM CTE2;
 END;
