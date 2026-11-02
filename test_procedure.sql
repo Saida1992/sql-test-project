@@ -6,4 +6,5 @@ BEGIN
     SELECT * FROM Employees WHERE Id = @EmployeeId;
 END
     --for test
+    SELECT * FROM Employees
     ;
